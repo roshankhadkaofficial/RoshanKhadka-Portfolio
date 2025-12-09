@@ -146,12 +146,13 @@ body{
         display: flex;
         text-decoration: none;
         text-align: center;
+        justify-content: center;
 
 }
 
 
 .footer{
-        color: rgb(0, 0, 0);
+        color: rgb(12, 12, 12);
         text-align: center;
         padding: 20px;
         margin-top: 20px;
@@ -195,6 +196,38 @@ body{
             
 }
 
+
+/* icons styling */
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  left: 0%;
+  transform: translateX(-50%); /* center horizontally */
+  margin-top: 160px;       /* ensures they stay at bottom */
+}
+
+.contact-icons a {
+  text-decoration: none;
+}
+
+.contact-icons i {
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+  transition: transform .3s, color .3s;
+}
+
+.contact-icons i:hover {
+  color: #ef476f;
+  transform: scale(1.2);
+}
+
+
+
+
+/* End of contact icons */
+
 .form input{
     width: 100%;
     padding: 10px;
@@ -236,7 +269,7 @@ body{
   text-align: left;         /* aligns text to the left */
   line-height: 1.5;         /* improves readability */
   border: 1px solid #ccc;
-  border-radius: 6px;
+  border-radius: 10px;
   box-sizing: border-box;
   resize: vertical;         /* allows user to resize height */
 }
@@ -244,14 +277,14 @@ body{
 
 .formsubmit{
         width: 100%;
-          background: #06d6a0;
+        background: #06d6a0;
         box-sizing: border-box;
         border-radius: 10px;
-       border: none;
-       padding: 10px;
-       margin-top: 20px;
-       cursor: pointer;
-       transition: .3s;
+        border: none;
+        padding: 10px;
+        margin-top: 20px;
+        cursor: pointer;
+        transition: .3s;
 }
 
 .formsubmit:hover{
