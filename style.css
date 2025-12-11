@@ -228,13 +228,15 @@ body{
 
 /* End of contact icons */
 
-.form input{
-    width: 100%;
-    padding: 10px;
+.form input, textarea{
+        resize: none;
+       display: flex;
+       width: 100%;
+       padding: 10px;
     margin-top: 20px;
     background: transparent;
-    border-bottom: 1px solid #00abf0;
     color: #fff;
+    border-bottom: 1px solid #00abf0;
 }
 
 .form input:focus{
@@ -261,17 +263,17 @@ body{
 }
 
 
-.formmessagebox {
-  width: 100%;
-  height: 150px;
-  padding: 12px;
+.formmessagebox textarea{
+        min-height: 150px;
+        width: 100%;
+       padding: 12px;
   font-size: 16px;
-  text-align: left;         /* aligns text to the left */
   line-height: 1.5;         /* improves readability */
   border: 1px solid #ccc;
   border-radius: 10px;
   box-sizing: border-box;
-  resize: vertical;         /* allows user to resize height */
+      border-bottom: 1px solid #00abf0;
+
 }
 
 
