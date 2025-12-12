@@ -137,29 +137,6 @@ body{
 }
 
 
-/* Footer  */
-
-.footerMain{
-        background: transparent;
-        height: 100%;
-        margin: 0;
-        display: flex;
-        text-decoration: none;
-        text-align: center;
-        justify-content: center;
-
-}
-
-
-.footer{
-        color: rgb(12, 12, 12);
-        text-align: center;
-        padding: 20px;
-        margin-top: 20px;
-        cursor: pointer;
-}
-
-
 /* About me Content form */
 
 .aboutme {
@@ -170,21 +147,46 @@ body{
         display: flex;
         align-items: center;
         padding: 0 10%;
+        font-size: 20px;
+}
+
+.aboutme h2{
+        color: #00abf0;
+        font-weight: 500px;
+        text-decoration: underline;
+        margin-bottom: 30px;
+        margin-top: 70px;
+        cursor: pointer;
+
 }
 
 /* contact page form  */
 
-
-.contact-content{
-        width: 100%;
-        display: flex;
-        height: 60vh;
-        margin-bottom: 30px;
-        padding: 30px;
-        text-align: center;
-        justify-content: center;
+.contact-content {
+  display: flex;
+  flex-direction: column;   /* stack items vertically */
+  justify-content: center;  /* center vertically */
+  align-items: center;      /* center horizontally */
+  text-align: center;
+  padding: 30px;
+  margin-bottom: 30px;
+  height: auto;             /* let content decide height */
+  border-radius: 10px;      /* rounded corners */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* subtle shadow */
+  margin-top: 100px;
 }
 
+.contact-content h2{
+        color: #000000;
+        margin-bottom: 30px;
+        font-size: 30px;
+        font-weight: 600px;
+        
+;
+}
+
+
+ 
 .contact{
         height: 100vh;
         background: url('images/roshan.jpg');
@@ -201,7 +203,7 @@ body{
 .contact-icons {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 40px;
   left: 0%;
   transform: translateX(-50%); /* center horizontally */
   margin-top: 160px;       /* ensures they stay at bottom */
@@ -301,3 +303,31 @@ body{
     font-weight: bold;
 }
 
+
+/* Footer  */
+
+.footerMain{
+        background-color: #9cbb74;
+        padding: 20px 10px;
+        border-top: 1px solid #333;
+        font-weight: bold;
+
+}
+
+
+.footer{
+        text-align: center;
+        color: #ccc;
+}
+
+.footer a{
+        color: #00abf0;
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 15px;
+}
+
+.footer a:hover{
+      color: #06d6a0;
+      text-decoration: underline;  
+}
