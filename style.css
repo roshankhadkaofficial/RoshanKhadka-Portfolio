@@ -30,12 +30,19 @@ body{
 }
 
 /* Hoover or navigation bar */
+
+.navbar{
+        display: flex;
+        gap: 20px;
+}
+
 .navbar a {
-        font-size: 18px;
+        font-size: 20px;
         color: #ededed;
         text-decoration: none;
         font-weight: 500;
-        margin-left: 35px;
+        margin: 0 15px;
+        padding: 10px;
 
 }
 
@@ -140,15 +147,21 @@ body{
 /* About me Content form */
 
 .aboutme {
-        height: 100vh;
+        min-height: 100vh;
+        height: auto;
         background: url('images/roshan.jpg');
         background-size: cover;
         background-position: center;
         display: flex;
         align-items: center;
-        padding: 0 10%;
+        padding: 0 5%;
         font-size: 20px;
+        box-sizing: border-box;
+        padding-bottom: 100px;
+        padding-top: 120px;
+
 }
+
 
 .aboutme h2{
         color: #00abf0;
@@ -168,21 +181,24 @@ body{
   justify-content: center;  /* center vertically */
   align-items: center;      /* center horizontally */
   text-align: center;
-  padding: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
   margin-bottom: 30px;
   height: auto;             /* let content decide height */
   border-radius: 10px;      /* rounded corners */
   box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* subtle shadow */
   margin-top: 100px;
+  max-width: 600px;
+  width: 100%;
 }
 
 .contact-content h2{
-        color: #000000;
+        color: #00abf0;
         margin-bottom: 30px;
         font-size: 30px;
-        font-weight: 600px;
+        font-weight: 600;
+        text-decoration: underline;
         
-;
 }
 
 
@@ -206,7 +222,7 @@ body{
   gap: 40px;
   left: 0%;
   transform: translateX(-50%); /* center horizontally */
-  margin-top: 160px;       /* ensures they stay at bottom */
+  margin-top: 40px;       /* ensures they stay at bottom */
 }
 
 .contact-icons a {
@@ -226,15 +242,13 @@ body{
 }
 
 
-
-
 /* End of contact icons */
 
 .form input, textarea{
         resize: none;
        display: flex;
        width: 100%;
-       padding: 10px;
+       padding: 12px;
     margin-top: 20px;
     background: transparent;
     color: #fff;
@@ -311,6 +325,8 @@ body{
         padding: 20px 10px;
         border-top: 1px solid #333;
         font-weight: bold;
+        bottom: 0;
+        width: 100%
 
 }
 
