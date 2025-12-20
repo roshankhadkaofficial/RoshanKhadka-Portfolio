@@ -51,7 +51,7 @@ body{
 .navbar a:hover,
 .navbar a:active {
   background-color: #00abf0;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 
 .home{
@@ -250,7 +250,6 @@ body{
   .header {
     padding: 15px 5%;              /* reduce side padding */
     flex-direction: column;        /* stack logo + navbar vertically */
-    align-items: center;           /* center everything */
   }
 
   .logo {
