@@ -45,10 +45,11 @@ export default {
         })
       });
 
-      if (send.ok) {
+      if (!send.ok) {
+        const errorText = await send.text();
         return new Response("Form submitted successfully!", { status: 200 });
       } else {
-        return new Response("Error sending email", { status: 500 });
+        return new Response("Error sending email" + errorText, { status: 500 });
       }
     }
 
