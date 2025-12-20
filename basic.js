@@ -1,36 +1,44 @@
-const form = document.getElementById('form');
-const submitBtn = form.querySelector('button[type="submit"]');
+  const SECRET_KEY = '0x4AAAAAACHkuwUxaQ4WUnhW7C_zsXi_Yhs';
 
-form.addEventListener('submit', async (e) => {
-    e.preventDefault();
+async function validateTurnstile(token, remoteip) {
+const formData = new FormData();
+formData.append('secret', SECRET_KEY);
+formData.append('response', token);
+formData.append('remoteip', remoteip);
 
-    const formData = new FormData(form);
-    formData.append("access_key", "a5b9c308-b5ca-415a-88ca-9642dc2818bd");
+      try {
+          const response = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+              method: 'POST',
+              body: formData
+          });
 
-    const originalText = submitBtn.textContent;
+          const result = await response.json();
+          return result;
+      } catch (error) {
+          console.error('Turnstile validation error:', error);
+          return { success: false, 'error-codes': ['internal-error'] };
+      }
 
-    submitBtn.textContent = "Sending...";
-    submitBtn.disabled = true;
+}
 
-    try {
-        const response = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            body: formData
-        });
+// Usage in form handler
+async function handleFormSubmission(request) {
+const body = await request.formData();
+const token = body.get('cf-turnstile-response');
+const ip = request.headers.get('CF-Connecting-IP') ||
+request.headers.get('X-Forwarded-For') ||
+'unknown';
 
-        const data = await response.json();
+      const validation = await validateTurnstile(token, ip);
 
-        if (response.ok) {
-            alert("Success! Your message has been sent.");
-            form.reset();
-        } else {
-            alert("Error: " + data.message);
-        }
+      if (validation.success) {
+          // Token is valid - process the form
+          console.log('Valid submission from:', validation.hostname);
+          return processForm(body);
+      } else {
+          // Token is invalid - reject the submission
+          console.log('Invalid token:', validation['error-codes']);
+          return new Response('Invalid verification', { status: 400 });
+      }
 
-    } catch (error) {
-        alert("Something went wrong. Please try again.");
-    } finally {
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-    }
-});
+}

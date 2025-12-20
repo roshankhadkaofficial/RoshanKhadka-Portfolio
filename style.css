@@ -18,7 +18,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     z-index: 100;
 
 }
@@ -34,7 +34,7 @@ body{
 
 .navbar{
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         gap: 20px;
 }
 
@@ -43,7 +43,7 @@ body{
         color: #ededed;
         text-decoration: none;
         font-weight: 500;
-        margin: 0 15px;
+        margin: 0 10px;
         padding: 10px;
 
 }
@@ -51,6 +51,7 @@ body{
 .navbar a:hover,
 .navbar a:active {
   background-color: #00abf0;
+  border-radius: 4px;
 }
 
 .home{
@@ -224,8 +225,6 @@ body{
   display: flex;
   justify-content: center;
   gap: 40px;
-  left: 0%;
-  transform: translateX(-50%); /* center horizontally */
   margin-top: 40px;       /* ensures they stay at bottom */
 }
 
@@ -243,6 +242,64 @@ body{
 .contact-icons i:hover {
   color: #ef476f;
   transform: scale(1.2);
+}
+
+/* For mobile device */
+
+@media (max-width: 700px) {
+  .header {
+    padding: 15px 5%;              /* reduce side padding */
+    flex-direction: column;        /* stack logo + navbar vertically */
+    align-items: center;           /* center everything */
+  }
+
+  .logo {
+    font-size: 20px;               /* smaller logo text */
+    margin-bottom: 10px;           /* space below logo */
+  }
+
+  .navbar {
+    flex-wrap: wrap;               /* allow wrapping if needed */
+    justify-content: center;       /* center links */
+    gap: 10px;                     /* smaller gap between links */
+  }
+
+  .navbar a {
+    font-size: 16px;               /* smaller link text */
+    margin: 5px;                   /* reduce margin */
+    padding: 8px;                  /* smaller padding */
+  }
+
+  .contact-content {
+    margin-top: 60px;
+    padding: 15px;
+    max-width: 90%;          /* use more screen width */
+  }
+
+  .contact-content h2 {
+    font-size: 22px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .contact-form button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+
+  .contact-icons {
+    gap: 20px;               /* smaller spacing */
+  }
+
+  .contact-icons i {
+    font-size: 22px;         /* smaller icons */
+  }
+
 }
 
 
