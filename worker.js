@@ -1,5 +1,5 @@
 export default {
-  async fetch(request) {
+  async fetch(request, env) {   // <-- add env here
     if (request.method === "POST") {
       const formData = await request.formData();
       const token = formData.get("cf-turnstile-response");
@@ -8,7 +8,7 @@ export default {
       const verify = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
         method: "POST",
         body: new URLSearchParams({
-          secret: "0x4AAAAAACHkuwUxaQ4WUnhW7C_zsXi_Yhs",   // from Cloudflare Turnstile dashboard
+          secret: env.TURNSTILE_SECRET_KEY,   // from Cloudflare secrets
           response: token
         })
       });
@@ -27,7 +27,7 @@ export default {
       const send = await fetch("https://api.sendgrid.com/v3/mail/send", {
         method: "POST",
         headers: {
-          "Authorization": "Bearer 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", // from SendGrid dashboard
+          "Authorization": `Bearer ${env.SENDGRID_API_KEY}`,  // from Cloudflare secrets
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
