@@ -45,12 +45,12 @@ export default {
         })
       });
 
-      if (!send.ok) {
-        const errorText = await send.text();
-        return new Response("Form submitted successfully!", { status: 200 });
-      } else {
-        return new Response("Error sending email" + errorText, { status: 500 });
-      }
+      if (send.ok) {
+  return new Response("Form submitted successfully!", { status: 200 });
+} else {
+  const errorText = await send.text();
+  return new Response("Error sending email: " + errorText, { status: 500 });
+}
     }
 
     return new Response("Method not allowed", { status: 405 });
