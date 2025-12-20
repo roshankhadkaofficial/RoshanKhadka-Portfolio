@@ -67,7 +67,7 @@ export default {
             <p>Your message has been sent successfully.<br>I’ll get back to you soon.</p>
             <a href="https://khadkapurna.com.np">Back to Home</a>
           </body></html>`;
-        return new Response(successHtml, { status: 200, headers: { "Content-Type": "text/html" } });
+        return new Response(successHtml, { status: 200, headers: { "Content-Type": "text/html; charset=UTF-8"} });
       } else {
         const errorText = await send.text();
         const errorHtml = `
@@ -78,7 +78,7 @@ export default {
             <p>${errorText}</p>
             <a href="https://khadkapurna.com.np">Back to Home</a>
           </body></html>`;
-        return new Response(errorHtml, { status: 500, headers: { "Content-Type": "text/html" } });
+        return new Response(errorHtml, { status: 500, headers: { "Content-Type": "text/html; charset=UTF-8" } });
       }
     }
 
