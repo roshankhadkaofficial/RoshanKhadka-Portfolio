@@ -34,7 +34,7 @@ export default {
           personalizations: [
             { to: [{ email: "roshankhadkaofficial@gmail.com" }] } // destination
           ],
-          from: { email: "roshankhadkaofficial@gmail.com" },       // verified single sender
+          from: { email: "contact@khadkapurna.com.np" },       // verified single sender
           subject: "New Contact Form Submission",
           content: [
             {
