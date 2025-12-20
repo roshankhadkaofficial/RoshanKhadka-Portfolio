@@ -1,120 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6BHYDJ6T3M"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-6BHYDJ6T3M');
-</script>
-    
-    <link rel="stylesheet" href="../style.css">
-    <link rel="icon" href="../images/portfolio.png" type="image/png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <script src="../basic.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Roshan Khadka | Web Designer in Kathmandu</title>
   <meta name="description" content="Get in touch with Roshan Khadka via Instagram, LinkedIn, or email. Reach out for web design, branding, and creative collaborations.">
   <meta name="keywords" content="Roshan Khadka contact, web designer Nepal, Kathmandu, Instagram, LinkedIn, email">
   <meta name="author" content="Roshan Khadka">
-  <meta property="og:title" content="Contact Roshan Khadka">
-  <meta property="og:description" content="Connect with Roshan for web design and creative projects.">
-  <meta property="og:image" content="images/portfolio.png">
-  <meta property="og:url" content="https://khadkapurna.com.np/contact.html">
-  <link rel="preconnect" href="https://challenges.cloudflare.com">
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../images/portfolio.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Cloudflare Turnstile -->
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
 
-     <header class="header"> <!--  Division of header   -->   
-      <a href="../" class="logo">Roshan khadka</a>
-    
-          <!-- Start of navigation bar -->
-     <nav class="navbar">
+<header class="header">
+  <a href="../" class="logo">Roshan Khadka</a>
+  <nav class="navbar">
+    <a href="about.html">About Me!</a>
+    <a href="contact.html" class="active">Contact Me!</a>
+  </nav>
+</header>
 
-       <a href="about.html" class="active"> AboutMe!</a>
-       <a href="contact.html"> ContactME!</a>
-
-     </nav>
-    <!-- End of navigation bar -->
-  </header>
-
-
-
-    <!-- Start of content -->
 <section class="contact">
-   <div class="contact-content">
-
-     <h2>Let’s Work Together</h2>
-  <p>
-    I’m always excited to connect with people who share a passion for design, <br>creativity, and technology.<br>
-    Whether you’re looking for a fresh website layout, branding ideas, or just want to say hello — feel <br>free to reach out.<br>
-    You can connect with me directly here:
-  </p>
-
-
-    
-
+  <div class="contact-content">
+    <h2>Let’s Work Together</h2>
+    <p>
+      I’m always excited to connect with people who share a passion for design, creativity, and technology.<br>
+      Whether you’re looking for a fresh website layout, branding ideas, or just want to say hello — feel free to reach out.<br>
+      You can connect with me directly here:
+    </p>
 
     <div class="contact-icons">
-                <a href="https://www.instagram.com/roshankhadka014/" target="_blank" title="Instagram">
-                  <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/roshankhadka014/" target="_blank" title="LinkedIn">
-                  <i class="fab fa-linkedin"></i>
-                </a>
-                <!-- <a href="#"><i class="fab fa-whatsapp"></i></a> -->
-            </div>
-
-
-
+      <a href="https://www.instagram.com/roshankhadka014/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/roshankhadka014/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
     </div>
-
+  </div>
 
   <div class="form">
-        <form id="form" action=" roshankhadka-portfolio.roshankhadkaofficial.workers.dev" method="POST">         <label for="name">Full Name</label><br>
-         <input type="text" id="username" name="username" placeholder="Enter  Your Name" class="formname" required>
-         
-         <br> <br>
+    <form id="form" action="https://roshankhadka-portfolio.roshankhadkaofficial.workers.dev/" method="POST">
+      <label for="name">Full Name</label><br>
+      <input type="text" id="name" name="name" placeholder="Enter Your Name" required><br><br>
 
-         <label for="email">Email</label> <br>
-         <input type="email" id="email" name="email" placeholder="Type your email" class="formemail" required>
-         
-         <br> <br>
+      <label for="email">Email</label><br>
+      <input type="email" id="email" name="email" placeholder="Type your email" required><br><br>
 
-         <!-- <input type="text" id="message" name="message" class="formmessagebox"> -->
-         <div class="formmessagebox">
-         <label for="message">Your Message</label> <br>
-         <textarea id="message" placeholder="Your message" required></textarea>
-         </textarea>
-         </div>
-         <br>
-           <!-- hCaptcha widget -->
-<div class="cf-turnstile" data-sitekey="0x4AAAAAACHku3yl5bmEggvR" data-theme="light" data-size="normal"
-  data-callback="onSuccess"></div>
-         <input type="submit" value="submit" class="formsubmit">
-        </form>
+      <label for="message">Your Message</label><br>
+      <textarea id="message" name="message" placeholder="Your message" required></textarea><br><br>
 
-    </div>
+      <!-- Turnstile widget -->
+      <div class="cf-turnstile" data-sitekey="0x4AAAAAACHku3yl5bmEggvR" data-theme="light"></div>
+
+      <input type="submit" value="Submit" class="formsubmit">
+    </form>
+  </div>
 </section>
-    
 
-        <!-- End of content -->
-
-          <!-- Footer  -->
-           <section class="footerMain">
-          <div class="footer">
-            <footer>   
-              <p> <a href="../">© 2025 Roshan Khadka | Kathmandu, Nepal</a></p>
-            
-            </footer>
-          </div>
-          </section>
-<!-- Footer end -->
+<section class="footerMain">
+  <div class="footer">
+    <footer>
+      <p><a href="../">© 2025 Roshan Khadka | Kathmandu, Nepal</a></p>
+    </footer>
+  </div>
+</section>
 
 </body>
 </html>
