@@ -244,22 +244,30 @@ body{
   transform: scale(1.2);
 }
 
+/* Cloudfare Verify */
+
+ .turnstile-box {
+  border-radius: 4px;          /* rounded corners */
+  overflow: hidden;            /* clips iframe corners */
+  display: flex;
+  flex-wrap: wrap;             /* responsive wrapping */
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  background-size: cover;      /* scales background image */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+} 
+
 /* For mobile device */
 
 @media (max-width: 700px) {
-  .header {
-    padding: 15px 5%;              /* reduce side padding */
-    flex-direction: column;        /* stack logo + navbar vertically */
-  }
-
   .logo {
     font-size: 20px;               /* smaller logo text */
     margin-bottom: 10px;           /* space below logo */
   }
 
   .navbar {
-    flex-wrap: wrap;               /* allow wrapping if needed */
-    justify-content: center;       /* center links */
+    flex-wrap: nowrap;               /* allow wrapping if needed */
     gap: 10px;                     /* smaller gap between links */
   }
 
@@ -276,7 +284,7 @@ body{
   }
 
   .contact-content h2 {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .contact-form input,
@@ -296,7 +304,7 @@ body{
   }
 
   .contact-icons i {
-    font-size: 22px;         /* smaller icons */
+    font-size: 20px;         /* smaller icons */
   }
 
 }

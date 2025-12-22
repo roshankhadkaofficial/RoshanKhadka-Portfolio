@@ -1,3 +1,7 @@
+User-agent: Googlebot
+Disallow: /nogooglebot/
+
 User-agent: *
 Allow: /
+
 Sitemap: https://khadkapurna.com.np/sitemap.xml
